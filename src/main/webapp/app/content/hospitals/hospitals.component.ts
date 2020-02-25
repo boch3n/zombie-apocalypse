@@ -51,7 +51,6 @@ export class HospitalsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.patient.patients = patientCount;
 
     this.readyToSubmit = true;
-    console.log(this.selection);
   }
 
   ngOnDestroy() {

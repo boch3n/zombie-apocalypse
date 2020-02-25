@@ -1,6 +1,5 @@
 package com.paloit.zombieapocalypse.service;
 
-import com.paloit.zombieapocalypse.domain.Hospital;
 import com.paloit.zombieapocalypse.entity.Patient;
 import com.paloit.zombieapocalypse.repository.PatientRepository;
 import org.springframework.stereotype.Service;
@@ -28,22 +27,12 @@ public class PatientService {
   }
 
   public void saveOrUpdate(Patient patient) {
-//    int averageProcessTime = hospital.getWaitingLists()[0].getAverageProcessTime();
-//    int patientCount = hospital.getWaitingLists()[0].getPatientCount();
-//    int waitingTime = averageProcessTime * patientCount;
-//    Patient patient = new Patient(pain, hospital.getName(), averageProcessTime, patientCount, waitingTime);
-
     patientRepository.save(patient);
 
   }
 
   public void delete(Long id) {
     patientRepository.deleteById(id);
-  }
-
-  public void addPatient(int pain, Hospital hospital) {
-
-
   }
 
 }
