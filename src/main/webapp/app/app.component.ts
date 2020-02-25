@@ -9,7 +9,7 @@ export class AppComponent {
   welcome: string;
 
   constructor() {
-    this.welcome = "Zombie apocalypse has started...";
+    this.welcome = 'Zombie apocalypse has started...';
   }
 
 

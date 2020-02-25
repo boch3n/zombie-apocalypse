@@ -1,11 +1,11 @@
-import {WaitingList} from "app/domain/waiting-list";
+import {WaitingList} from 'app/domain/waiting-list';
 
 export class HospitalTemp {
-  constructor(name: String, waitingList: WaitingList) {
+  constructor(name: string, waitingList: WaitingList) {
     this.name = name;
     this.waitingList = waitingList;
   }
 
-  name: String;
+  name: string;
   waitingList: WaitingList;
 }

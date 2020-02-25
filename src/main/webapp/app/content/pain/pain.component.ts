@@ -1,9 +1,9 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
-import {IllnessService} from "app/services/illness.service";
-import {Subscription} from "rxjs";
-import {PainService} from "app/services/pain.service";
-import {Patient} from "app/domain/patient";
+import {Router} from '@angular/router';
+import {IllnessService} from 'app/services/illness.service';
+import {Subscription} from 'rxjs';
+import {PainService} from 'app/services/pain.service';
+import {Patient} from 'app/domain/patient';
 
 @Component({
   selector: 'app-pain',

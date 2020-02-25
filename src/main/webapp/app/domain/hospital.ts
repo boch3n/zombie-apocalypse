@@ -1,5 +1,5 @@
-import {WaitingList} from "app/domain/waiting-list";
-import {Location} from "app/domain/location";
+import {WaitingList} from 'app/domain/waiting-list';
+import {Location} from 'app/domain/location';
 
 export class Hospital {
   constructor(name: string, waitingList: WaitingList[], waitTime: number) {

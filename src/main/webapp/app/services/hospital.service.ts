@@ -1,18 +1,18 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {Hospital} from "app/domain/hospital";
-import {map} from "rxjs/operators";
-import {HospitalTemp} from "app/domain/hospital-temp";
-import {Patient} from "app/domain/patient";
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {Hospital} from 'app/domain/hospital';
+import {map} from 'rxjs/operators';
+import {HospitalTemp} from 'app/domain/hospital-temp';
+import {Patient} from 'app/domain/patient';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HospitalService {
 
-  baseURL = "http://localhost:8080/";
-  extURL = "http://dmmw-api.australiaeast.cloudapp.azure.com:8080/hospitals/";
+  baseURL = 'http://localhost:8080/';
+  extURL = 'http://dmmw-api.australiaeast.cloudapp.azure.com:8080/hospitals/';
 
   constructor(private httpClient: HttpClient) {
   }
@@ -26,12 +26,12 @@ export class HospitalService {
 
   private convertResult(result: any, pain: number) {
 
-    let res: Hospital[] = [];
+    const res: Hospital[] = [];
 
     result._embedded.hospitals.forEach(object => {
       object.waitingList.forEach(wList => {
         if (wList.levelOfPain === pain) {
-          let waitTime = wList.averageProcessTime * wList.patientCount;
+          const waitTime = wList.averageProcessTime * wList.patientCount;
           res.push(new Hospital(object.name, wList, waitTime));
         }
       });
@@ -40,14 +40,14 @@ export class HospitalService {
     return res;
   }
 
-  registerPatient(postdata:Patient) {
+  registerPatient(postdata: Patient) {
 
-    this.httpClient.post(this.baseURL + "patients", postdata).subscribe(
+    this.httpClient.post(this.baseURL + 'patients', postdata).subscribe(
       data => {
-        console.log("POST Request is successful ", data);
+        console.log('POST Request is successful ', data);
       },
       error => {
-        console.log("Error", error);
+        console.log('Error', error);
       }
     );
   }

@@ -1,17 +1,17 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, Observable, Subject} from "rxjs";
-import {Illness} from "app/domain/illness";
-import {map} from "rxjs/operators";
+import {HttpClient} from '@angular/common/http';
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
+import {Illness} from 'app/domain/illness';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IllnessService {
 
-  extURL = "http://dmmw-api.australiaeast.cloudapp.azure.com:8080/illnesses/";
+  extURL = 'http://dmmw-api.australiaeast.cloudapp.azure.com:8080/illnesses/';
 
-  private illness = new BehaviorSubject<string>("Illness");
+  private illness = new BehaviorSubject<string>('Illness');
 
   constructor(private httpClient: HttpClient) {
   }
@@ -24,7 +24,7 @@ export class IllnessService {
   }
 
   private convertResult(result: any) {
-    let res: Illness[] = [];
+    const res: Illness[] = [];
     result._embedded.illnesses.forEach(object => res.push(object.illness));
     return res;
   }

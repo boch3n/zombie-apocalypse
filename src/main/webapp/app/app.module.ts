@@ -4,16 +4,16 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {IllnessesComponent} from './content/illnesses/illnesses.component';
-import {IllnessService} from "app/services/illness.service";
-import {HttpClientModule} from "@angular/common/http";
+import {IllnessService} from 'app/services/illness.service';
+import {HttpClientModule} from '@angular/common/http';
 import {HospitalsComponent} from './content/hospitals/hospitals.component';
-import {HospitalService} from "app/services/hospital.service";
+import {HospitalService} from 'app/services/hospital.service';
 import {PainComponent} from './content/pain/pain.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from "@angular/material/table";
-import {MatSortModule} from "@angular/material/sort";
-import {MatPaginatorModule} from "@angular/material/paginator";
-import {PageNotFoundComponent} from "app/content/page-not-found/page-not-found.component";
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {PageNotFoundComponent} from 'app/content/page-not-found/page-not-found.component';
 
 
 @NgModule({

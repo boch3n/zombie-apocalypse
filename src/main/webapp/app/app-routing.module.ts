@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {IllnessesComponent} from "app/content/illnesses/illnesses.component";
-import {HospitalsComponent} from "app/content/hospitals/hospitals.component";
-import {PainComponent} from "app/content/pain/pain.component";
-import {PageNotFoundComponent} from "app/content/page-not-found/page-not-found.component";
+import {IllnessesComponent} from 'app/content/illnesses/illnesses.component';
+import {HospitalsComponent} from 'app/content/hospitals/hospitals.component';
+import {PainComponent} from 'app/content/pain/pain.component';
+import {PageNotFoundComponent} from 'app/content/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '', pathMatch: 'full'},
