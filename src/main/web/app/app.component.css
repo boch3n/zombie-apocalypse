@@ -1,0 +1,25 @@
+.container{
+background-color: #8b606c;
+}
+
+.card-body{
+background-image: url("../assets/zombie_start.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity:50%;
+}
+
+.card-title {
+  background-color: rgba(139,0,0,0.5);
+  border-style: solid;
+  border-color: white;
+  border-width: thin;
+  border-radius: 5px;
+}
+
+.btn-info{
+  background-color: darkred;
+  border-color: white;
+  border-width: thin;
+}

@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+}
+
+.pain-table-col:hover {
+  background-color: rgba(139,0,0,0.5);
+  cursor:pointer;
+}
+
+.card-body{
+  font-size: 20px;
+  text-align: center;
+}
+
+.pain-table {
+  margin-top: 20px;
+}
+
+.pain-table-col{
+  border-radius: 10px;
+}
+

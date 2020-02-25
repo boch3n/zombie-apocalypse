@@ -1,0 +1,42 @@
+table {
+  width: 100%;
+}
+
+.mat-row:hover {
+  background-color: #8b606c;
+  cursor:pointer;
+}
+
+.selected{
+   background: #8b606c;
+ }
+
+.card-body{
+  font-size: 20px;
+  text-align: center;
+}
+
+.mat-elevation-z8{
+  margin-top: 15px;
+}
+
+.btn-info{
+  background-color: darkred;
+  border-color: white;
+  border-width: thin;
+  width:50%;
+  margin-top: 20px;
+}
+
+.extraText {
+  font-size: 80%;
+  color: #7f7f7f;
+  line-height: 50%;
+  vertical-align: middle;
+}
+
+.timeText {
+  color: darkred;
+  line-height: 50%;
+  vertical-align: middle;
+}

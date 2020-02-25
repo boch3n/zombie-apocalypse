@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+}
+
+.mat-row:hover {
+  background-color: #8b606c;
+  cursor: pointer;
+}
+
+.card-body {
+  font-size: 20px;
+  text-align: center;
+}
+
+.labelForSpan {
+  display: block;
+  margin-bottom: 10px; /** Change this value to whatever you wish **/
+}
+
+.mat-elevation-z8 {
+  margin-top: 15px;
+}
+
+.mat-header-cell {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mat-cell {
+  text-align: center;
+  justify-content: center;
+}
