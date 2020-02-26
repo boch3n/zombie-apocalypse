@@ -44,14 +44,17 @@ export class HospitalsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.displayedData.sort = this.sort;
   }
 
-  readyToRegister(name: string, waitTime: number, averageProcessTime: number, patientCount: number) {
+  readyToRegister(name: string, waitTime: number, averageProcessTime: number, patientCount: number, row: Hospital) {
     this.patient.hospital = name;
     this.patient.waitingTime = waitTime;
     this.patient.processTime = averageProcessTime;
     this.patient.patients = patientCount;
 
+    this.selection.select(row);
     this.readyToSubmit = true;
   }
+
+
 
   ngOnDestroy() {
     // prevent memory leak when component destroyed
