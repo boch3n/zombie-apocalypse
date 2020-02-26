@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import java.util.List;
+import java.util.Optional;
 
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -25,7 +26,7 @@ public class PatientController {
   }
 
   @GetMapping("/patients/{id}")
-  private Patient getPatient(@PathVariable("id") Long id) {
+  private Optional<Patient> getPatient(@PathVariable("id") Long id) {
     return patientService.getPatientById(id);
   }
 

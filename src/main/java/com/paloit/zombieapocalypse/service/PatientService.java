@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PatientService {
@@ -18,12 +19,15 @@ public class PatientService {
     this.patientRepository = patientRepository;
   }
 
+  public PatientService() {
+  }
+
   public List<Patient> getAllPatients() {
     return new ArrayList<>(patientRepository.findAll());
   }
 
-  public Patient getPatientById(Long id) {
-    return patientRepository.findById(id).get();
+  public Optional<Patient> getPatientById(Long id) {
+    return patientRepository.findById(id);
   }
 
   public void saveOrUpdate(Patient patient) {
